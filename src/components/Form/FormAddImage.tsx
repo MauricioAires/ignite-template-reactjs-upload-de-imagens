@@ -118,10 +118,8 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
           setLocalImageUrl={setLocalImageUrl}
           setError={setError}
           trigger={trigger}
-          name="image"
-          {...register('image', {
-            ...formValidations.image,
-          })}
+          {...register('image', formValidations.image)}
+          error={errors.image}
         />
 
         <TextInput
